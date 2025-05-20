@@ -1,13 +1,6 @@
 import { useRef, useEffect, useState } from 'react'
 import { ajax } from 'jquery'
 
-
-var express = require('express')
-var cors = require('cors')
-var app = express()
-
-app.use(cors())
-
 export default function Clicker({increment, keyName, textColor})
 
 {
