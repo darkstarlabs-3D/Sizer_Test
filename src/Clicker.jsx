@@ -44,7 +44,7 @@ export default function Clicker({increment, keyName, textColor})
         ajax({
             type: "GET",
             url: "http://127.0.0.1:5000/sizer",
-            dataType: "jsonp",
+            // dataType: "jsonp",
             crossDomain:true,
             data:{
                 sc_mass : 10,
