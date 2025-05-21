@@ -44,26 +44,25 @@ export default function Clicker({increment, keyName, textColor})
         ajax({
             type: "GET",
             url: "http://127.0.0.1:5000/sizer",
-            // dataType: "jsonp",
             crossDomain:true,
+            // dataType: "jsonp",
             data:{
-                sc_mass : 10,
-                t_m_r : 10,
-                dv : 10,
-                prop : "Xe"
+                sc_mass : 2000,
+                t_m_r : 0.125,
+                dv : 5,
+                prop : "Xe",
             },
-            success: function( result ) {
-                    console.log('success - 2nd');
-
-
-                    console.log( result ); // << returns page content, not console.log value
-
-            },
+            success:function(data)
+            {
+                console.log(data);
+                
+            }, 
             error:function(error){
                 console.log('ajax Error ' + JSON.stringify(error));
             } 
         })
-
+        
+        
     }
     
     useEffect(() =>
